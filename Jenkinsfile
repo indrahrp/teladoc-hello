@@ -6,14 +6,14 @@ node {
    }
 
    stage('build image') {
-   app = docker.build("teladoc-hello")
+   app = docker.build("indrahrp/teladoc-hello")
    }
    stage('Test') {
    sh 'echo Testing'
    }
 
    stage('Push Image') {
-   docker.withRegistry('indrahrp','indrahrp') {
+   docker.withRegistry('https://registry.hub.docker.com','indrahrp') {
    app.push("${env.BUILD_NUMBER}") 	    
    }
    } 
