@@ -16,6 +16,7 @@ node {
    docker.withRegistry('https://registry.hub.docker.com','dockerhrpdockerhub') {
    app.push("${env.BUILD_NUMBER}") 	    
    }
+   } 
 
 
 
