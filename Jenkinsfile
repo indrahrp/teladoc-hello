@@ -1,6 +1,7 @@
 
 node {
    def app
+   env.MYWEBSVR='10.97.0.197'
    stage('Clone repo') {
    checkout scm
    }
