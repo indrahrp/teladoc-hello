@@ -21,7 +21,7 @@ node {
    } 
 
    stage('Deploy New Image') {
-   sh 'ssh root@${env.MYWEBSVR} < /root/refreshdocker.sh'
+   sh 'ssh root@"${env.MYWEBSVR}" < /root/refreshdocker.sh'
    }
 
 
