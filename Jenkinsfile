@@ -21,7 +21,7 @@ node {
    } 
 
    stage('Deploy New Image') {
-   sh 'ssh root@10.96.0.197 < /root/refreshdocker.sh'
+   sh 'ssh root@10.96.0.197 /root/refreshdocker.sh'
    }
 
 
