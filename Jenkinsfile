@@ -1,7 +1,7 @@
 
 node {
    def app
-   env.MYWEBSVR='10.97.0.197'
+   env.MYWEBSVR='10.96.0.197'
    stage('Clone repo') {
    checkout scm
    }
@@ -21,7 +21,7 @@ node {
    } 
 
    stage('Deploy New Image') {
-   sh 'ssh root@"${env.MYWEBSVR}" < /root/refreshdocker.sh'
+   sh 'ssh root@10.96.0.197 < /root/refreshdocker.sh'
    }
 
 
